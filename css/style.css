@@ -1,0 +1,27 @@
+.singleResult img{
+    width: 18.75rem;
+    height: 26.25rem;
+}
+
+.singleResult{
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 18.75rem;
+}
+
+.ratingContainer{
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.AddToWL{
+    display: inline-flex;
+    float: right;
+    align-self: center;
+}
+
+.searchResults{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}
