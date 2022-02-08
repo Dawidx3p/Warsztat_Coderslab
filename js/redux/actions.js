@@ -6,8 +6,11 @@ const FILMS_ERROR = 'FILMS_ERROR';
 
 const ADD_TO_WATCHED_LIST = 'ADD_TO_WATCHED_LIST';
 const DELETE_FROM_WATCHED_LIST = 'DELETE_FROM_WATCHED_LIST';
+const CHANGE_RATING = 'CHANGE_RATING';
+const SET_WATCH_LIST = 'SET_WATCH_LIST';
 
 const ADD_TO_WATCH_LIST = 'ADD_TO_WATCH_LIST';
+const SET_WATCHED_LIST = 'SET_WATCHED_LIST';
 const DELETE_FROM_WATCH_LIST = 'DELETE_FROM_WATCH_LIST';
 
 const searchFilms = (payload) => (dispatch) => {
@@ -44,6 +47,21 @@ const addToWatchedList = (payload) => ({
     payload
 })
 
+const setToWatchList = (payload) => ({
+    type: SET_WATCH_LIST,
+    payload
+})
+
+const setWatchedList = (payload) => ({
+    type: SET_WATCHED_LIST,
+    payload
+})
+
+const changeRating = (payload) => ({
+    type: CHANGE_RATING,
+    payload
+})
+
 const deleteFromWatchedList = (payload) => ({
     type: DELETE_FROM_WATCHED_LIST,
     payload
@@ -59,7 +77,7 @@ const addToWatchList = (payload) => ({
     payload
 })
 
-export {SEARCHING_FILMS, FILMS_FETCHED, FILMS_ERROR, ADD_TO_WATCHED_LIST, 
-    ADD_TO_WATCH_LIST, DELETE_FROM_WATCH_LIST, 
-    DELETE_FROM_WATCHED_LIST, addToWatchedList, addToWatchList, 
-    deleteFromWatchList, deleteFromWatchedList, searchFilms}
+export {SEARCHING_FILMS, FILMS_FETCHED, FILMS_ERROR, ADD_TO_WATCHED_LIST, CHANGE_RATING, 
+    ADD_TO_WATCH_LIST, DELETE_FROM_WATCH_LIST, SET_WATCH_LIST, SET_WATCHED_LIST, 
+    DELETE_FROM_WATCHED_LIST, addToWatchedList, changeRating, addToWatchList, 
+    deleteFromWatchList, deleteFromWatchedList, searchFilms, setToWatchList, setWatchedList}

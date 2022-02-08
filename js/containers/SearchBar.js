@@ -1,5 +1,5 @@
 import { connect } from "react-redux";
-import SearchBar from "../components/SearchBar";
+import SearchBar from "../components/Search/SearchBar";
 import { searchFilms } from '../redux/actions';
 
 const mapDispatch = (dispatch) => ({
