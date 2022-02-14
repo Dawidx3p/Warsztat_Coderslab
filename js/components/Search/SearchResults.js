@@ -1,12 +1,12 @@
 import React, { useEffect } from "react";
 import SingleResult from './SingleResult'
 
-export default function SearchResults({watchedList,toWatchList,setWatchList,setWatchedList, results, error, addToWatchList, addToWatchedList, changeRating}){
+export default function SearchResults({watchedList,toWatchList,setWatchList,setWatchedList, results, error}){
     useEffect(() => {
         const toWatch = JSON.parse(localStorage.getItem('toWatchList'));
-        if(toWatch && toWatch.length>0)setWatchList(toWatch);
-        const watchedList = JSON.parse(localStorage.getItem('watchedList'));
-        if(watchedList && watchedList.length>0)setWatchedList(watchedList);
+        if(toWatch && toWatch.length>0 && toWatchList.length===0)setWatchList(toWatch);
+        const watchedListLocal = JSON.parse(localStorage.getItem('watchedList'));
+        if(watchedListLocal && watchedListLocal.length>0 && watchedList.length===0)setWatchedList(watchedListLocal);
     },[])
     useEffect(() => {
         localStorage.setItem('watchedList', JSON.stringify(watchedList))
@@ -16,7 +16,7 @@ export default function SearchResults({watchedList,toWatchList,setWatchList,setW
     },[toWatchList])
     return(
         <ul className='searchResults'>
-            {results && results.map((result, key) => <SingleResult key={key} {...result} {...{addToWatchList, addToWatchedList, changeRating}}/>)}
+            {results && results.map((result, key) => <SingleResult key={key} {...result}/>)}
             {error && <h3>{error}</h3>}
         </ul>
     )

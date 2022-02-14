@@ -1,11 +1,13 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Rating from "../../containers/Rating";
 
-export default function SingleResult({Poster, imdbID}){
+export default function SingleResult(props){
+    const {Poster, imdbID} = props;
     return(
         <div className="singleResult">
-            <img src={Poster}/>
-            <Rating imdbID={imdbID} Poster={Poster}/>
+            <Link to={`${imdbID}`}><img src={Poster}/></Link>
+            <Rating {...props}/>
         </div>
     )
 }

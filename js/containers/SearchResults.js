@@ -11,7 +11,7 @@ const mapState = ({moviesSearch, toWatchList, watchedList}) => ({
 
 const mapDispatch = (dispatch) => ({
     setWatchList: (payload) => dispatch(setToWatchList(payload)),
-    setWatchedList: (payload) => dispatch(setWatchedList(payload))
+    setWatchedList: (payload) => dispatch(setWatchedList(payload)),
 })
 
 

@@ -1,12 +1,27 @@
+html{
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+   }
+
+body{
+    margin: 0px;
+}
+
+.container{
+    margin: 0 10rem;
+}
+
 .singleResult img{
-    width: 18.75rem;
-    height: 26.25rem;
+    width: 16vw;
+    height: 22vw;
 }
 
 .singleResult{
     display: grid;
     grid-template-columns: 1fr;
-    max-width: 18.75rem;
+    max-width: 16vw;
+    background-color: rgb(41, 186, 147);
+    padding: 0.3rem
 }
 
 .ratingContainer{
@@ -22,6 +37,123 @@
 }
 
 .searchResults{
+    margin: 0px;
+    padding: 0px;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 2rem;
+    margin-bottom: 5rem;
+}
+
+nav{
+    background-color: rgb(0, 16, 11);
+}
+
+nav ul{
+    margin: 0;
+}
+
+nav li{
+    display: inline-block;
+}
+
+nav li a{ 
+    border-top: 0.1rem solid rgb(0, 16, 11);
+    transition-duration: 200ms;
+    padding: 1.5rem 0;
+    margin: 0 2rem;
+    text-decoration: none;
+    display: block;
+    color: rgb(238, 255, 250);
+}
+nav li a:hover{ 
+    color: rgb(203, 255, 237);
+    border-top: 0.1rem solid rgb(203, 255, 237);
+}
+
+.detailsContainer{
+    padding: 3rem;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 2fr;
+    background-color: rgb(197, 248, 239);
+}
+
+.detailsRight{
+    margin: 5rem 0;
+}
+
+.detailsPicture{
+    display: flex;
+    flex-direction: column;
+    max-width: 16vw;
+    
+}
+
+.detailsPicture img{
+    width: 16vw;
+    height: 22vw;
+}
+
+.searchBar{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.search{
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(41, 186, 147);
+    color: rgb(238, 255, 250);
+    border: 0px;
+    height: 3rem;
+}
+
+.submit{
+    font-family: 'Montserrat', sans-serif;
+    height: 3rem;
+    padding: 0.4rem;
+    font-size: 1rem;
+    background-color: rgb(0, 16, 11);
+    border: 0px;
+    color: rgb(238, 255, 250);
+    font-weight: 100;
+}
+
+.submit:hover{ color: rgb(203, 255, 237); cursor: pointer;}
+
+.filterForm{
+    margin: 1rem 0;
+}
+
+.filterForm select{
+    padding: 0.4rem;
+    font-size: 1rem;
+    background-color: rgb(0, 16, 11);
+    color: rgb(238, 255, 250);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.filterForm input{
+    padding: 0.4rem;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(41, 186, 147);
+    color: rgb(238, 255, 250);
+}
+
+.filterForm input{
+    border: 0px;
+    padding: 0.6rem;
+    font-size: 0.8rem;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(41, 186, 147);
+    color: rgb(238, 255, 250);
+}
+
+.filterForm ::placeholder{
+    color: rgb(238, 255, 250);
 }

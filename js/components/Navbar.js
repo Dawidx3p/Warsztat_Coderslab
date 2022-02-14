@@ -5,9 +5,9 @@ export default function Navbar(){
     return(
         <nav>
             <ul>
-                <li><Link to='/'>Wyszukiwarka</Link></li>
-                <li><Link to='/watched'>Obejrzane</Link></li>
-                <li><Link to='/to_watch'>Do obejrzenia</Link></li>
+                <li><Link to='/'>Search</Link></li>
+                <li><Link to='/watched'>Watched</Link></li>
+                <li><Link to='/to_watch'>To Watch</Link></li>
             </ul>
         </nav>
     )

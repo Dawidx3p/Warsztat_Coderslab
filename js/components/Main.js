@@ -1,6 +1,7 @@
-import React from "react";
+import React, {useState} from "react";
 import { Provider } from "react-redux";
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Details from "../containers/Details";
 
 import ToWatch from "../containers/ToWatch";
 import Watched from "../containers/Watched";
@@ -14,8 +15,9 @@ export default function Main(){
             <Router>
             <Switch>
                 <Route exact path='/' component={Search} />
-                <Route path='/watched' component={Watched} />
-                <Route path='/to_watch' component={ToWatch} />
+                <Route exact path='/watched' component={Watched}/>
+                <Route exact path='/to_watch' component={ToWatch}/>
+                <Route path='/:imdbID' component={Details} />
             </Switch>
             </Router>
         </Provider>
